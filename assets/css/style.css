@@ -1,0 +1,52 @@
+* {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 200;
+    }
+
+h2 {
+    font-size: 1.5em;
+    }
+
+nav {
+    margin-bottom: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+#messages {
+    margin-top: 40px;
+}
+
+textarea {
+    padding: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: 0px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: grey;
+}

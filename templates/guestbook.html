@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Guestbook{% endblock title %}
+
+{% block page_content %}
+<h1>Guestbook</h1>
+
+<form method="post">
+    <p>Please leave your entry for the Guestbook.</p>
+
+    <p>First and last name: <input type="text" name="name"></p>
+
+    <p>Email: <input type="email" name="email"></p>
+
+    <p><textarea name="message" rows="10" cols="100" placeholder="Enter your message here" required></textarea></p>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+<div id="messages">
+{% for message in messages %}
+    <p>
+        <strong><a href="mailto:{{message.email}}">{{ message.author_name }}</a></strong> at {{ message.created.strftime('%d %B %Y at %H:%M') }}:
+        <br>
+        <em>{{ message.message }}</em>
+        <hr>
+    </p>
+    <br>
+{% else %}
+    <p>Be the first to leave a message.</p>
+{% endfor %}
+</div>
+
+
+{% endblock page_content %}
